@@ -2,32 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: green;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.site-name {
+  color: #F0E217;
+  font-size: 90px;
+  font-family: Impact;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.button {
+  color: white;
+  background-color: #F0E217;
+  padding: 14px 25px;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  width: 300px;
+  font-size: 20px;
+  border-width: 2px;
+  border-color: black;
+  font-family: Verdana;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+img {
+  height: 500px;
+  width: auto;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  z-index: 100;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+div {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.schedule-button {
+  color: white;
+  background-color: #0f4b57;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  width: 400px;
+  height: 122px;
+  font-size: 30px;
+  border-width: 2px;
+  border-color: black;
+  font-family: Verdana;
 }
