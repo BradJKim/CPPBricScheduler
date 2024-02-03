@@ -13,7 +13,7 @@ export default function Home() {
       <li>
         <ul>
           <li>
-            <Link className = "button" href="">
+            <Link className = "button" href="/login-page">
               Login
             </Link>
           </li>
@@ -25,7 +25,7 @@ export default function Home() {
         </ul>
       </li>
       <li>
-        <Link className = "schedule-button" href="">
+        <Link className = "schedule-button" href="/form">
           Create a Schedule
         </Link>
       </li>

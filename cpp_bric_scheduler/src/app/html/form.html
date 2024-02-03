@@ -1,12 +1,18 @@
-import React from 'react';
-
-export default function Home() {
-  return (
-    <main>
-      <h1>Form</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+  </head>
+  <body>
+    <div>
+      <h2>Form</h2>
 
       <form action="index.ts" method="POST">
-        <label htmlFor="gender">What is your gender?</label>
+        <label for="gender">What is your gender?</label>
         <select id="gender">
           <option value="none" selected disabled hidden>Select an Option</option>
           <option value="male">Male</option>
@@ -15,7 +21,7 @@ export default function Home() {
           <option value="Prefer Not To Answer">Prefer Not To Answer</option>
         </select>
 
-        <label htmlFor="seriousness">How serious are you about working out?</label>
+        <label for="seriousness">How serious are you about working out?</label>
         <select id="seriousness">
           <option value="none" selected disabled hidden>Select an Option</option>
           <option value="1">1 (Just doing it to exercise)</option>
@@ -25,7 +31,7 @@ export default function Home() {
           <option value="5">5 (dedicated, training for a specific goal)</option>
         </select>
 
-        <label htmlFor="experience">How much experience do you have working out?</label>
+        <label for="experience">How much experience do you have working out?</label>
         <select id="experience">
           <option value="none" selected disabled hidden>Select an Option</option>
           <option value="less-than-1">less that 1 year</option>
@@ -34,7 +40,7 @@ export default function Home() {
           <option value="over-5">5+ years</option>
         </select>
 
-        <label htmlFor="days-per-week">How mamy days a week do you want to workout?</label>
+        <label for="days-per-week">How mamy days a week do you want to workout?</label>
         <select id="days-per-week">
           <option value="none" selected disabled hidden>Select an Option</option>
           <option value="1">1</option>
@@ -46,45 +52,45 @@ export default function Home() {
           <option value="5">7</option>
         </select>
 
-        <label htmlFor="schedule">What times during the week are you available to workout?</label>
-        <div className="schedule">
+        <label for="schedule">What times during the week are you available to workout?</label>
+        <div class="schedule">
           <label>Mon: </label>
-          <input type="time" id="time-start" min="06:00" max="24:00"></input>
+          <input type="time" id="time-start" min="06:00" max="24:00">
           <label>To</label>
-          <input type="time" id="time-end" min="06:00" max="24:00"></input>
+          <input type="time" id="time-end" min="06:00" max="24:00">
 
           <label>Tue: </label>
-          <input type="time" id="time-start" min="06:00" max="24:00"></input>
+          <input type="time" id="time-start" min="06:00" max="24:00">
           <label>To</label>
-          <input type="time" id="time-end" min="06:00" max="24:00"></input>
+          <input type="time" id="time-end" min="06:00" max="24:00">
 
           <label>Wed: </label>
-          <input type="time" id="time-start" min="06:00" max="24:00"></input>
+          <input type="time" id="time-start" min="06:00" max="24:00">
           <label>To</label>
-          <input type="time" id="time-end" min="06:00" max="24:00"></input>
+          <input type="time" id="time-end" min="06:00" max="24:00">
 
           <label>Thu: </label>
-          <input type="time" id="time-start" min="06:00" max="24:00"></input>
+          <input type="time" id="time-start" min="06:00" max="24:00">
           <label>To</label>
-          <input type="time" id="time-end" min="06:00" max="24:00"></input>
+          <input type="time" id="time-end" min="06:00" max="24:00">
 
           <label>Fri: </label>
-          <input type="time" id="time-start" min="06:00" max="24:00"></input>
+          <input type="time" id="time-start" min="06:00" max="24:00">
           <label>To</label>
-          <input type="time" id="time-end" min="06:00" max="24:00"></input>
+          <input type="time" id="time-end" min="06:00" max="24:00">
 
           <label>Sat: </label>
-          <input type="time" id="time-start" min="06:00" max="24:00"></input>
+          <input type="time" id="time-start" min="06:00" max="24:00">
           <label>To</label>
-          <input type="time" id="time-end" min="06:00" max="24:00"></input>
+          <input type="time" id="time-end" min="06:00" max="24:00">
 
           <label>Sun: </label>
-          <input type="time" id="time-start" min="06:00" max="24:00"></input>
+          <input type="time" id="time-start" min="06:00" max="24:00">
           <label>To</label>
-          <input type="time" id="time-end" min="06:00" max="24:00"></input>
+          <input type="time" id="time-end" min="06:00" max="24:00">
         </div>
-
-        <label htmlFor="focus">What is your primary focus?</label>
+        
+        <label for="focus">What is your primary focus?</label>
         <select id="focus">
           <option value="none" selected disabled hidden>Select an Option</option>
           <option value="staying-fit">Just Staying Fit</option>
@@ -94,7 +100,7 @@ export default function Home() {
           <option value="athletic">Athletic Training</option>
         </select>
 
-        <label htmlFor="bodypart">What body parts do you want to focus on?</label>
+        <label for="bodypart">What body parts do you want to focus on?</label>
         <select id="bodypart">
           <option value="none" selected disabled hidden>Select an Option</option>
           <option value="upper">Upper</option>
@@ -102,9 +108,11 @@ export default function Home() {
           <option value="Both">Both</option>
         </select>
 
-        <input type="reset" id="reset-button"></input>
-        <input type="submit"></input>
+        <input type="reset" id="reset-button">
+        <input type="submit">
       </form>
-    </main>
-  );
-}
+
+    </div>
+	<script src="form.ts"></script>
+  </body>
+</html>
