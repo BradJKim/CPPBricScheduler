@@ -5,7 +5,7 @@ import { OpenAI } from "langchain/llms/openai";
 import { PromptTemplate } from "langchain/prompts";
 import { LLMChain } from "langchain/chains"
 
-const apiKey = process.env.OPEN_API_KEY;
+const apiKey = "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";
 
 const template = 
     "Your goal is to create a weekly workout schedule to a college student in their early-20's that attends Cal Poly Pomona College. They are looking to work out at their school gym which is called the Bric. " +
@@ -15,7 +15,7 @@ const template =
         "On a scale of 1 through 5, they chose a {commitment} for commitment in working out. " +
         "They have {experience} years of experience " +
         "They want to work out for {availablity} days " +
-        "Their primary focus is {primacyFocus} " +
+        "Their primary focus is {primaryFocus} " +
         "They want to focus on their {bodyFocus} " +
         "On Monday, they are free from {mondayTimeStart} to {mondayTimeEnd}. " +
         "On Monday, they are free from {tuesdayTimeStart} to {tuesdayTimeEnd}. " +
@@ -60,7 +60,7 @@ export default async function addSchedule(data: any) {
             commitment: data.commitment,
             experience: data.experience,
             availablity: data.availablity,
-            primaryFocus: data.primacyFocus,
+            primaryFocus: data.primaryFocus,
             bodyFocus: data.bodyFocus,
             mondayTimeStart: data.mondayTimeStart,
             mondayTimeEnd: data.mondayTimeEnd,
@@ -78,9 +78,11 @@ export default async function addSchedule(data: any) {
             sundayTimeEnd: data.sundayTimeEnd
         });
 
+        console.log("response: ")
+        console.log(response)
         result = await addDoc(collection(db, "schedules"), {
             schedule: response,
-            userIdentifier: data.userId
+            userIdentifier: 1 //data.userId
         });
     } catch (e) {
         error = e;
