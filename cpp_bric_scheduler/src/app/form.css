@@ -1,0 +1,23 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    margin-bottom: 10px;
+}
+
+.schedule {
+    width: 350px;
+    display: grid;
+    grid-template-columns: 60px 150px 1fr 100px;
+    margin-bottom: 10px;
+}
+
+#time-start {
+    margin-right: 30px;
+}
+
+#reset-button {
+    margin-bottom: 10px;
+}
