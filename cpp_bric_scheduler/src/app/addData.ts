@@ -1,7 +1,7 @@
 import { db  } from "./firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 
-export default async function addData(data: any) {
+export default async function addSchedule(data: any) {
     let result = null;
     let error = null;
 
