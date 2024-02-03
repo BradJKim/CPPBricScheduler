@@ -4,8 +4,15 @@
 
 .tabs {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color: green;
+  align-items: center;
+}
+
+.horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .site-name {
@@ -15,8 +22,8 @@
 }
 
 .button {
-  color: white;
-  background-color: gold;
+  color: black;
+  background-color: goldenrod;
   padding: 14px 25px;
   text-align: center;
   display: inline-block;
@@ -26,15 +33,28 @@
   border-width: 2px;
   border-color: black;
   font-family: Verdana;
+  border-radius: 15px;
 }
 
-img {
-  height: 500px;
+.button:hover {
+  background-color: gold;
+  color: green;
+  transition: 0.40s;
+}
+
+.bric {
+  display: flex;
+  align-self: stretch;
+}
+
+.logo {
+  height: 140px;
   width: auto;
-  margin: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  z-index: 100;
+}
+
+.blue {
+  color: lightblue;
+  text-decoration: underline;
 }
 
 h1 {
@@ -47,16 +67,78 @@ div {
 }
 
 .schedule-button {
-  color: white;
-  background-color: #0f4b57;
-  padding: 10px 20px;
+  color: black;
+  background-color: lightblue;
+  padding: 30px 50px;
   text-align: center;
   display: inline-block;
   font-weight: bold;
-  width: 400px;
-  height: 122px;
-  font-size: 30px;
+  width: 100%;
+  font-size: 20px;
   border-width: 2px;
   border-color: black;
   font-family: Verdana;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.schedule-button:hover {
+  background-color: blue;
+  color: white;
+  transition: 0.40s;
+}
+
+.white {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.white2 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: white;
+}
+
+.gold {
+  color: gold;
+  font-weight: 400px;
+  font-size: 16px;
+}
+
+.instructions {
+  color: green;
+  font-size: 30px;
+  font-weight: 250;
+  font-family: monospace;
+}
+
+.green {
+  background-color: green;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.black {
+  color: black;
+  font-size: 40px;
+  font-weight: 250;
+  font-family: monospace;
+  align-self: center;
+  margin-top: 15px;
+}
+
+.instructions-container {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  color: blue;
+  text-decoration: underline;
+  font-size: 35px;
+  font-family: monospace;
 }
