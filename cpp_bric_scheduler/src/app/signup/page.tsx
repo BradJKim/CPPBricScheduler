@@ -1,16 +1,22 @@
 'use client';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
 import { useState} from 'react';
-import { auth } from '../firebaseConfig';
+import signin from '../../../pages/api/auth/signin';
 import '../login.css';
 
 export default function signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const signup = () => {
-        createUserWithEmailAndPassword(auth, email, password);
+    const signup = async () => {
+        try{
+          const response = await signin(email, password); 
+          console.log(response)
+          return response
+        }
+        catch (error){
+          console.log(error)
+        }
     }
 
     return (
