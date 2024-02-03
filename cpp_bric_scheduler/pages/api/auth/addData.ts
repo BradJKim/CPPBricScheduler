@@ -5,7 +5,7 @@ import { OpenAI } from "langchain/llms/openai";
 import { PromptTemplate } from "langchain/prompts";
 import { LLMChain } from "langchain/chains"
 
-const apiKey = "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";
+const apiKey = "";
 
 const template = 
     "Your goal is to create a weekly workout schedule to a college student in their early-20's that attends Cal Poly Pomona College. They are looking to work out at their school gym which is called the Bric. " +
@@ -51,8 +51,6 @@ const chain = new LLMChain({
 });
 
 export default async function addSchedule(data: any) {
-    let result = null;
-    let error = null;
 
     try {
         const response = await chain.call({
@@ -80,13 +78,13 @@ export default async function addSchedule(data: any) {
 
         console.log("response: ")
         console.log(response)
-        result = await addDoc(collection(db, "schedules"), {
+        const result = await addDoc(collection(db, "schedules"), {
             schedule: response,
-            userIdentifier: 1 //data.userId
+            userIdentifier: 1
         });
-    } catch (e) {
-        error = e;
+        return response.text
+    } 
+    catch (error) {
+        console.log(error);
     }
-
-    return { result, error };
 }

@@ -1,6 +1,6 @@
 'use client'
-import { useState } from 'react';
-import addData from '../../../pages/api/auth/addData';
+import { useState, useEffect } from 'react';
+import addSchedule from '../../../pages/api/auth/addData';
 
 import '../form.css';
 
@@ -27,15 +27,20 @@ export default function Home() {
     sundayTimeStart: '',
     sundayTimeEnd: ''
   });
+  const [scheduleResponse, setScheduleResponse] = useState('');
 
-  // TODO: add user id value
+  useEffect(() => {
+    console.log('Text changed:', scheduleResponse);
+  }, [scheduleResponse]);
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     const form = formData
     try{
-      const response = await addData(form)
+      const response = await addSchedule(form)
       console.log(response)
+      setScheduleResponse(response)
       return response
     }
     catch (error){
@@ -152,6 +157,12 @@ export default function Home() {
 
         <button type="submit" >Submit</button>
       </form>
+
+      <div>
+        <input type="text" value={scheduleResponse} onChange={handleInputChange} />
+        <p>{scheduleResponse}</p>
+      </div>
+
     </main>
   );
 }
