@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,21 +13,21 @@ export default function Home() {
       <li>
         <ul>
           <li>
-            <a className = "button" href="">
+            <Link className = "button" href="">
               Login
-            </a>
+            </Link>
           </li>
           <li>
-            <a className = "button" href="">
+            <Link className = "button" href="">
               Create an Account
-            </a>
+            </Link>
           </li>
         </ul>
       </li>
       <li>
-        <a className = "schedule-button" href="">
+        <Link className = "schedule-button" href="">
           Create a Schedule
-        </a>
+        </Link>
       </li>
     </ul>
 
@@ -35,9 +36,7 @@ export default function Home() {
     <div>
       <h1>About</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        CPP BRIC Scheduler aims to connect Cal Poly students to their campus gym by creating personalized workout plans. Students enter their various fitness goals, weekly availabilities, and general priorities and will receive a gym schedule tailored for them to maximize their workouts. This website was created by Brad Kim, Nicholas Hoang, Michael Ly, and Darshil Sheth for the Bronco Hacks 2024 event. The project's GitHub repository can be found here.
       </p>
     </div>
   </main>

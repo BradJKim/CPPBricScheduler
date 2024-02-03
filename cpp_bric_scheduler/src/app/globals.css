@@ -9,19 +9,19 @@
 }
 
 .site-name {
-  color: #F0E217;
+  color: gold;
   font-size: 90px;
   font-family: Impact;
 }
 
 .button {
   color: white;
-  background-color: #F0E217;
+  background-color: gold;
   padding: 14px 25px;
   text-align: center;
   display: inline-block;
   font-weight: bold;
-  width: 300px;
+  width: 100%;
   font-size: 20px;
   border-width: 2px;
   border-color: black;
