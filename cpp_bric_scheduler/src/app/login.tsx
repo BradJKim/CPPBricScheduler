@@ -1,3 +1,6 @@
+'use client'
+import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import './login.css'
 export default function Home() {
     return (

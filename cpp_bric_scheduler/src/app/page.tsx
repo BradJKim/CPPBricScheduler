@@ -18,7 +18,7 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <Link className = "button" href="">
+            <Link className = "button" href="/signup">
               Create an Account
             </Link>
           </li>
